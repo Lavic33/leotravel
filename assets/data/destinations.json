@@ -1,0 +1,147 @@
+[
+    {
+        "id":1,
+        "name":"Tasos",
+        "country":{
+            "id":1,
+            "name":"Greece"
+        },
+        "price":330,
+        "coverImg":"tasos.jpg",
+        "noNights":10,
+        "desc":"O tasosu...",
+        "prevoz" :"Avion"
+    },
+    {
+        "id":2,
+        "name":"Pefkohori",
+        "country":{
+            "id":1,
+            "name":"Greece"
+        },
+        "price":250,
+        "coverImg":"pefki.jpg",
+        "noNights":9,
+        "desc":"O pefkiju...",
+        "prevoz" :"Autobus"
+    },
+    {
+        "id":3,
+        "name":"Zakintos",
+        "country":{
+            "id":1,
+            "name":"Greece"
+        },
+        "price":220,
+        "coverImg":"zante.jfif",
+        "noNights":11,
+        "desc":"O zanteu...",
+        "prevoz":"Autobus"
+    },
+    {
+        "id":4,
+        "name":"Sicilija",
+        "country":{
+            "id":4,
+            "name":"Italy"
+        },
+        "price":420,
+        "coverImg":"Sicilia.jpg",
+        "noNights":8,
+        "desc":"O siciliji...",
+        "prevoz":"Avion"
+    },
+    {
+        "id":5,
+        "name":"Kalabrija",
+        "country":{
+            "id":4,
+            "name":"Italy"
+        },
+        "price":390,
+        "coverImg":"Calabria.jpg",
+        "noNights":7,
+        "desc":"O kalabriji...",
+        "prevoz":"Avion"
+    },
+    {
+        "id":6,
+        "name":"Kusadasi",
+        "country":{
+            "id":2,
+            "name":"Turkey"
+        },
+        "price":230,
+        "coverImg":"kusadasi.jpg",
+        "noNights":10,
+        "desc":"O kusadasiju...",
+        "prevoz":"Autobus"
+    },
+    {
+        "id":7,
+        "name":"Antalija",
+        "country":{
+            "id":2,
+            "name":"Turkey"
+        },
+        "price":250,
+        "coverImg":"antalija.jpg",
+        "noNights":10,
+        "desc":"O antaliji...",
+        "prevoz":"Autobus"
+    },
+    {
+        "id":8,
+        "name":"Majorka",
+        "country":{
+            "id":3,
+            "name":"Spain"
+        },
+        "price":500,
+        "coverImg":"majorka.jpg",
+        "noNights":9,
+        "desc":"O majorci...",
+        "prevoz":"Avion"
+    },
+    {
+        "id":9,
+        "name":"Kosta Brava",
+        "country":{
+            "id":3,
+            "name":"Spain"
+        },
+        "price":460,
+        "coverImg":"costabrava.jpg",
+        "noNights":10,
+        "desc":"O majorci...",
+        "prevoz":"Avion"
+    },
+    {
+        "id":10,
+        "name":"Hurgada",
+        "country":{
+            "id":5,
+            "name":"Egypt"
+        },
+        "price":600,
+        "coverImg":"hurgada.jfif",
+        "noNights":12,
+        "desc":"O majorci...",
+        "prevoz":"Avion"
+    },
+    {
+        "id":11,
+        "name":"Sarm El Seik",
+        "country":{
+            "id":5,
+            "name":"Egypt"
+        },
+        "price":530,
+        "coverImg":"sarmelsaik.jpg",
+        "noNights":11,
+        "desc":"O majorci...",
+        "prevoz":"Avion"
+    }
+
+
+]

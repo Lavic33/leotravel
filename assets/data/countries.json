@@ -1,0 +1,27 @@
+[
+    {
+        "id":1,
+        "name" : "Greece",
+        "image":"assets/images/greece.svg"
+    },
+    {
+        "id":2,
+        "name" : "Turkey",
+        "image":"assets/images/turkey.svg"
+    },
+    {
+        "id":3,
+        "name" : "Spain",
+        "image":"assets/images/spain.svg"
+    },
+    {
+        "id":4,
+        "name" : "Italy",
+        "image":"assets/images/italy.svg"
+    },
+    {
+        "id":5,
+        "name":"Egypt",
+        "image":"assets/images/egypt.svg"
+    }
+]
