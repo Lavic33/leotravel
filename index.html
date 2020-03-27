@@ -106,7 +106,6 @@
 							<h3>Choose Country</h3>
 						
 
-							<!-- <i href="#mu-about" class="mu-scrolldown" id="mu-scrolldown"><i class="fa fa-chevron-down" aria-hidden="true"></i></a> -->
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -123,9 +122,9 @@
 					<div class="col-6" id="transport">
 						<select id="prevoz">
 
-							<option value="-1">Sve vrste prevoza</option>
-							<option value="Avion"><i class=icon-foo>&#xf072;</i>  Avionski prevoz</option>
-							<option value="Autobus"> <i class=icon-foo>&#xf207;</i>  Autobuski prevoz</option>
+							<option value="-1">All transport</option>
+							<option value="Avion"><i class=icon-foo>&#xf072;</i>  Airplane transport</option>
+							<option value="Autobus"> <i class=icon-foo>&#xf207;</i>  Autobus transport</option>
 							</select>
 						
 					</div>
@@ -158,32 +157,7 @@
 							<h2>Why Us?</h2>
 							<div class="mu-why-us-content">
 								<div class="row" id="promo">
-									<!-- <div class="col-md-4">
-										<div class="mu-why-us-single">
-											<div class="my-why-us-single-icon">
-												<i class="fa fa-bed" aria-hidden="true"></i>
-											</div>
-											<h3>Luxurious Hotels</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum corporis commodi, ipsum sequi quae nemo quasi voluptatibus quaerat nulla! Doloribus cumque ipsum, tempore veritatis quibusdam quae numquam minus iste!</p>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="mu-why-us-single">
-											<div class="my-why-us-single-icon">
-												<i class="fa fa-thumbs-up" aria-hidden="true"></i>
-											</div>
-											<h3>The Best Service</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum corporis commodi, ipsum sequi quae nemo quasi voluptatibus quaerat nulla! Doloribus cumque ipsum, tempore veritatis quibusdam quae numquam minus iste!</p>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="mu-why-us-single">
-											<div class="my-why-us-single-icon">
-												<i class="fa fa-plane" aria-hidden="true"></i>
-											</div>
-											<h3>Unique Experience</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum corporis commodi, ipsum sequi quae nemo quasi voluptatibus quaerat nulla! Doloribus cumque ipsum, tempore veritatis quibusdam quae numquam minus iste!</p>
-										</div> -->
+							
 									</div>
 								</div>
 							</div>
@@ -207,11 +181,13 @@
 								</div>
 								<div class="col-md-6">
 									<div class="mu-about-right">
-										<h2>About Our Agency</h2>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam aliquam distinctio magni enim error commodi suscipit nobis alias nulla, itaque ex, vitae repellat amet neque est voluptatem iure maxime eius!</p>
+										<h2>About Me</h2>
+										<p>My name is Lav Bjelogrlic - Nikolov,i am 21 years old developer from Belgrade,Serbia.This site is my school project based on AJAX,JSON and JavaScript.</p>
 
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus in accusamus qui sequi nisi, sint magni, ipsam, porro nesciunt id veritatis quaerat ipsum consequatur laborum, provident veniam quibusdam placeat quam?</p>
+										<p>I am high interested in backend development with C# and PHP. I like problem solving and to think logicly.Rather than learning something for the sake of it I like to understand how and why. </p>
+										<a href="https://lavic33.github.io/LavBjelogrlic/" target="blank">Link to my Portfolio</a>
 									</div>
+
 								</div>
 							</div>
 							<!-- End Feature Content -->
@@ -227,49 +203,7 @@
 
 	
 
-		<!-- Start Clients -->
-		<section id="mu-clients">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="mu-clients-area">
-							<h2>Our Awesome Clients</h2>
-
-							<!-- Start Clients brand logo -->
-							<div class="mu-clients-slider">
-
-								<div class="mu-clients-single">
-									<img src="assets/images/sponsor-logo-1.png" alt="Brand Logo">
-								</div>
-
-								<div class="mu-clients-single">
-									<img src="assets/images/sponsor-logo-2.png" alt="Brand Logo">
-								</div>
-
-								<div class="mu-clients-single">
-									<img src="assets/images/sponsor-logo-3.png" alt="Brand Logo">
-								</div>
-
-								<div class="mu-clients-single">
-									<img src="assets/images/sponsor-logo-4.png" alt="Brand Logo">
-								</div>
-
-								<div class="mu-clients-single">
-									<img src="assets/images/sponsor-logo-5.png" alt="Brand Logo">
-								</div>
-
-								<div class="mu-clients-single">
-									<img src="assets/images/sponsor-logo-6.png" alt="Brand Logo">
-								</div>
-							</div>
-							<!-- End Clients brand logo -->
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End Clients -->
+		
 
 		<!-- Start Call to Action -->
 
@@ -282,7 +216,6 @@
 					<div class="col-md-12">
 						<div class="mu-contact-area">
 							<h2>Book your favourite tour!</h2>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
 							
 							<!-- Start Contact Content -->
 							<div class="mu-contact-content">
@@ -294,12 +227,14 @@
 											<form id="ajax-contact" method="post" class="mu-contact-form">
 												<div class="row mb-5">
 													<div class="col-md-6">
+														<h6>Your destination :</h6>
 														<select name="destinacija" id="destinacija" class="p-2">
 
 														</select>
 														<p id="greskaDest" class="red"></p>
 													</div>
 													<div class="col-md-6 ">
+														<h6>Number of Persons :</h6>
 														<select name="brOsoba" id="brOsoba" class="p-2">
 															
 														</select>
@@ -378,12 +313,14 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="mu-footer-left">
-							<p class="mu-copy-right">&copy; Copyright <a rel="nofollow" href="http://markups.io">markups.io</a>. All right reserved.</p>
+							<p class="mu-copy-right">&copy; Copyright <a rel="nofollow" href="http://markups.io">markups.io</a>. All right reserved.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="doc.pdf" target="blank">Dokumentacija</a></p>
+							
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="mu-footer-right">
 							<div class="mu-social-media">
+								
 								<a href="#"><i class="fa fa-facebook"></i></a>
 								<a href="#"><i class="fa fa-twitter"></i></a>
 								<a href="#"><i class="fa fa-google-plus"></i></a>

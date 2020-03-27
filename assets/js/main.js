@@ -3,7 +3,8 @@ window.onload = function(){
     getCountries();
     getDestinations();
     dohvatiPromo();
-    document.querySelector("#sort").addEventListener("change",sortitaj);
+    proveriLs();
+    document.querySelector("#sort").addEventListener("change",prepSort);
     document.querySelector("#prevoz").addEventListener("change",filterPrevoz);
     document.querySelector("#posalji").addEventListener("click",forma);
     document.querySelector("#destinacija").addEventListener("change",forma);
@@ -12,6 +13,7 @@ window.onload = function(){
     document.querySelector("#name").addEventListener("blur",forma);
     document.querySelector("#email").addEventListener("blur",forma);
 }
+
 
 
 
@@ -37,15 +39,22 @@ function getDestinations(){
             setDestinations(destinations);
             nizDest = destinations;
             fillOptionDest(nizDest);
+            
         }
 
     })
 }
 
+function prepSort(){
+    let krit= document.querySelector("#sort").value;
+    addLocalS("cena",krit);
+    sortitaj(krit,nizDest);
+}
 
 
 function setCountries(countries){
-    let html="";
+    let html=`<a href="#" class="country" data-countryId="0"><img class="drzava" src="assets/images/all.jpg"/></a>
+    `;
 
     for(c of countries){
         html+=`
@@ -64,6 +73,8 @@ function setCountries(countries){
 function filterZemljePrep(e){
     e.preventDefault();
     let selectedId=this.dataset.countryid;
+
+    addLocalS("zemlja",selectedId);
     filtriraj(selectedId);
    
 
@@ -84,7 +95,7 @@ function setDestinations(destinations){
                 <h4> ${d.noNights} Nights</h4>
                 <span class="mu-price-tag">&euro; ${d.price} </span>
                 <p>${d.desc}</p>
-                <a href="#" class="mu-book-now-btn">Book Now</a>
+                <a href="#mu-contact" data-id="${d.id}"  class="mu-book-now-btn bookDest">Book Now</a>
             </div>
         </div>
     </div>
@@ -109,7 +120,7 @@ function setDestinations(destinations){
 
 function filterPrevoz(destinations){
     let prevoz=document.querySelector("#prevoz").value;
-    console.log(prevoz);
+    addLocalS("prevoz",prevoz);
     $.ajax({
         url:"assets/data/destinations.json",
         method:"get",
@@ -126,13 +137,9 @@ function filterPrevoz(destinations){
     
 }
 
-function sortitaj(){
-    let krit= document.querySelector("#sort").value;
-    $.ajax({
-        url:"assets/data/destinations.json",
-        method:"get",
-        type:"json",
-        success:function(destinations){
+function sortitaj(krit,destinations){
+    
+   console.log(destinations);
             
            if(krit == "PriceLtoH"){
                destinations.sort(function(a,b){
@@ -171,8 +178,8 @@ function sortitaj(){
            
         }
 
-    })
-}
+
+
 
 
 function dohvatiPromo () {
@@ -212,7 +219,11 @@ function filtriraj(idZemlje){
         method:"get",
         type:"json",
         success:function(destinations){
-            destinations = destinations.filter(d => d.country.id == idZemlje);
+
+            if(idZemlje != "0"){
+                destinations = destinations.filter(d => d.country.id == idZemlje);
+            }
+            
             setDestinations(destinations);
         }
 
@@ -269,7 +280,7 @@ function forma(){
         document.querySelector("#greskaDest").innerHTML = "* You must choose destination ";
     }
     regName=/(^[A-Z][A-z\s]*)$/;
-    regMail = /^[A-z\.\_\-]{4,20}@[A-z\.\_\-]{4,20}$/;
+    regMail = /^[A-z\.\_\-\d]{4,20}@[A-z\.\_\-]{4,20}$/;
   
     if(regName.test(ime) && ime != ""){
         document.querySelector("#greskaName").innerHTML = "";
@@ -342,4 +353,46 @@ function forma(){
 
     ispisCene();
     
+}
+
+
+
+function addLocalS(name,vrednost){
+
+    localStorage.setItem(name, vrednost);
+   
+  
+}
+
+function proveriLs(){
+    console.log(nizDest);
+    if(localStorage){
+        let zemlja = localStorage.getItem("zemlja");
+        let cena = localStorage.getItem("cena");
+        let prevoz = localStorage.getItem("prevoz");
+
+       let pomocniNiz=[];
+
+ 
+        pomocniNiz = nizDest.filter(x=> x.country.id == zemlja);
+
+        nizDest = pomocniNiz;
+
+
+    
+        pomocniNiz = nizDest.filter(x=> x.prevoz == prevoz);
+
+        nizDest = pomocniNiz;
+  
+
+     
+     
+
+        setDestinations(nizDest);
+    
+    
+    
+
+        
+    }
 }

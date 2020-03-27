@@ -9,7 +9,7 @@
         "price":330,
         "coverImg":"tasos.jpg",
         "noNights":10,
-        "desc":"O tasosu...",
+        "desc":"Thassos or Thasos (Greek: Θάσος, Thásos) is a Greek island, geographically part of the North Aegean Sea, but administratively part of the Kavala regional unit.",
         "prevoz" :"Avion"
     },
     {
@@ -22,7 +22,7 @@
         "price":250,
         "coverImg":"pefki.jpg",
         "noNights":9,
-        "desc":"O pefkiju...",
+        "desc":"Pefkochori, meaning pine village is a tourist town located in the southeast of the peninsula of Kassandra, Chalkidiki, Greece. ",
         "prevoz" :"Autobus"
     },
     {
@@ -35,7 +35,7 @@
         "price":220,
         "coverImg":"zante.jfif",
         "noNights":11,
-        "desc":"O zanteu...",
+        "desc":"Zakynthos or Zante  is a Greek island in the Ionian Sea. It is the third largest of the Ionian Islands. Zakynthos is a separate regional unit of the Ionian Islands region, and its only municipality.",
         "prevoz":"Autobus"
     },
     {
@@ -48,7 +48,7 @@
         "price":420,
         "coverImg":"Sicilia.jpg",
         "noNights":8,
-        "desc":"O siciliji...",
+        "desc":"Sicily  is the largest island in the Mediterranean Sea and one of the 20 regions of Italy. It is one of the five Italian autonomous regions and is officially referred to as Regione Siciliana. It has 5 million inhabitants.",
         "prevoz":"Avion"
     },
     {
@@ -61,7 +61,7 @@
         "price":390,
         "coverImg":"Calabria.jpg",
         "noNights":7,
-        "desc":"O kalabriji...",
+        "desc":"Calabria  is a region in Southern Italy.The capital city of Calabria is Catanzaro. The Regional Council of Calabria is based at the Palazzo Campanella in the city of Reggio Calabria. ",
         "prevoz":"Avion"
     },
     {
@@ -74,7 +74,7 @@
         "price":230,
         "coverImg":"kusadasi.jpg",
         "noNights":10,
-        "desc":"O kusadasiju...",
+        "desc":"Kuşadası  is a resort town on Turkey's Aegean coast, and the center of the seaside district of the same name within Aydın Province. Kuşadası is 95 km  south of İzmir, and 71 km  from Aydın. The municipality's primary industry is tourism.",
         "prevoz":"Autobus"
     },
     {
@@ -87,7 +87,7 @@
         "price":250,
         "coverImg":"antalija.jpg",
         "noNights":10,
-        "desc":"O antaliji...",
+        "desc":"Antalya is the fifth-most populous city in Turkey and the capital of Antalya Province. Located on Anatolia's southwest coast bordered by the Taurus Mountains, Antalya is the largest Turkish city on the Mediterranean coast outside the Aegean region with over one million people in its metropolitan area.",
         "prevoz":"Autobus"
     },
     {
@@ -100,7 +100,7 @@
         "price":500,
         "coverImg":"majorka.jpg",
         "noNights":9,
-        "desc":"O majorci...",
+        "desc":"Mallorca  is the largest island in the Balearic Islands, which are part of Spain and located in the Mediterranean. The native language, as on the rest of the Balearic Islands, is Catalan, which is co-official with Spanish.",
         "prevoz":"Avion"
     },
     {
@@ -113,7 +113,7 @@
         "price":460,
         "coverImg":"costabrava.jpg",
         "noNights":10,
-        "desc":"O majorci...",
+        "desc":"The Costa Brava is a coastal region of Catalonia in northeastern Spain, consisting of the comarques (counties) of Alt Empordà, Baix Empordà and Selva in the province of Girona. Costa Brava stretches from the town of Blanes, 60 km northeast of Barcelona, to the French border.",
         "prevoz":"Avion"
     },
     {
@@ -126,7 +126,7 @@
         "price":600,
         "coverImg":"hurgada.jfif",
         "noNights":12,
-        "desc":"O majorci...",
+        "desc":"Hurghada  is a city in the Red Sea Governorate of Egypt. It is one of the country's main tourist centres located on the Red Sea coast.",
         "prevoz":"Avion"
     },
     {
@@ -139,7 +139,7 @@
         "price":530,
         "coverImg":"sarmelsaik.jpg",
         "noNights":11,
-        "desc":"O majorci...",
+        "desc":"Sharm El Sheikh  is an Egyptian city on the southern tip of the Sinai Peninsula, in South Sinai Governorate, on the coastal strip along the Red Sea.",
         "prevoz":"Avion"
     }
 

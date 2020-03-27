@@ -2,19 +2,19 @@
     {
         "id":1,
        "name":"Luxurious Hotels",
-       "desc" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum corporis commodi, ipsum sequi quae nemo quasi voluptatibus quaerat nulla! ",
+       "desc" : "Blocks of reserved rooms: During peak times, hotel reservations can be hard to get, especially in cities like New York, Washington DC, and Chicago. We have room blocks reserved all over the world so that accommodations may be available even when the cities are “sold out.” ",
        "icon":"bed"
     },
     {
         "id":2,
        "name":"The Best Service",
-       "desc" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum corporis commodi, ipsum sequi quae nemo quasi voluptatibus quaerat nulla! ",
+       "desc" : "At Leo Travel, quality and service go hand-in-hand. We go above and beyond to ensure these two hallmarks are met at every step of your journey. To help achieve these core values, we closely monitor client satisfaction and are consistently seeking new ways to exceed our clients’ expectations. ",
        "icon":"thumbs-up"
     },
     {
         "id":3,
        "name":"Unique Experience",
-       "desc" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eum corporis commodi, ipsum sequi quae nemo quasi voluptatibus quaerat nulla! ",
+       "desc" : "From first contact, through the duration of your stay, and until you are safely home again, we are with you. You will know your personal travel consultant both by name and by face, as we make it a practice to greet our clients personally and go through the entire trip. ",
        "icon":"plane"
     }
 ]
