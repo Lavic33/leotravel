@@ -365,7 +365,7 @@ function addLocalS(name,vrednost){
 }
 
 function proveriLs(){
-    console.log(nizDest);
+    
     if(localStorage){
         let zemlja = localStorage.getItem("zemlja");
         let cena = localStorage.getItem("cena");
@@ -373,22 +373,24 @@ function proveriLs(){
 
        let pomocniNiz=[];
 
- 
-        pomocniNiz = nizDest.filter(x=> x.country.id == zemlja);
 
-        nizDest = pomocniNiz;
+       if(zemlja != null){
+           pomocniNiz = nizDest.filter(x=> x.country.id == zemlja);
+           nizDest = pomocniNiz;
 
+           if(prevoz != null){
+               pomocniNiz = nizDest.filter(x=> x.prevoz == prevoz);
+               nizDest = pomocniNiz;
+           }
 
-    
-        pomocniNiz = nizDest.filter(x=> x.prevoz == prevoz);
-
-        nizDest = pomocniNiz;
+           setDestinations(nizDest);
+       }
   
 
      
      
 
-        setDestinations(nizDest);
+       
     
     
     

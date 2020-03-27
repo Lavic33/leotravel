@@ -1,0 +1,3 @@
+User-agent:*
+Disallow:/Admin/
+Sitemap: https://lavic33.github.io/bgdtour/sitemap.xml
