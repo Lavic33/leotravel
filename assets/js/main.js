@@ -3,7 +3,7 @@ window.onload = function(){
     getCountries();
     getDestinations();
     dohvatiPromo();
-    proveriLs();
+    ocistiLs();
     document.querySelector("#sort").addEventListener("change",prepSort);
     document.querySelector("#prevoz").addEventListener("change",filterPrevoz);
     document.querySelector("#posalji").addEventListener("click",forma);
@@ -13,6 +13,11 @@ window.onload = function(){
     document.querySelector("#name").addEventListener("blur",forma);
     document.querySelector("#email").addEventListener("blur",forma);
 }
+
+function ocistiLs () {
+
+    localStorage.clear()
+  }
 
 
 
@@ -44,9 +49,9 @@ function getDestinations(){
 
     })
 }
-
+var krit;
 function prepSort(){
-    let krit= document.querySelector("#sort").value;
+    krit= document.querySelector("#sort").value;
     addLocalS("cena",krit);
     sortitaj(krit,nizDest);
 }
@@ -81,40 +86,105 @@ function filterZemljePrep(e){
 }
 
 function setDestinations(destinations){
-    
-    let html=`<div class="row">`;
-    for(d of destinations){
-        let i=0;
+        var privrNiz=[];
+        if(localStorage.getItem("zemlja")){
+            let zemlja = localStorage.getItem("zemlja");
+
+            if(zemlja != 0 ){
+                privrNiz = destinations.filter(x=> x.country.id ==zemlja);
+
+                destinations = privrNiz;
+            }
+           
         
-        html+=`
-        <div class="col-md-4">
-        <div class="mu-featured-tours-single">
-            <img src="assets/images/${d.coverImg}" alt="img">
-            <div class="mu-featured-tours-single-info">
-                <h3>${d.name} ${prevozIkonica(d.prevoz)}</h3>
-                <h4> ${d.noNights} Nights</h4>
-                <span class="mu-price-tag">&euro; ${d.price} </span>
-                <p>${d.desc}</p>
-                <a href="#mu-contact" data-id="${d.id}"  class="mu-book-now-btn bookDest">Book Now</a>
+            
+        }
+        if(localStorage.getItem("cena")){
+            let cena = localStorage.getItem("cena");
+            if(cena == "PriceLtoH"){
+                destinations.sort(function(a,b){
+                     if(a.price<b.price){
+                         return -1;
+                     }
+                     if(a.price>b.price){
+                         return 1;
+                     }
+                     if(a.price == b.price){
+                         return 0;
+                     }
+                 })
+                 
+                
+            }
+ 
+            if(cena == "PriceHtoL"){
+             destinations.sort(function(a,b){
+                  if(a.price>b.price){
+                      return -1;
+                  }
+                  if(a.price<b.price){
+                      return 1;
+                  }
+                  if(a.price == b.price){
+                      return 0;
+                  }
+              })
+             
+             
+         }
+        
+
+        }
+
+        if(localStorage.getItem("prevoz")){
+            let prevoz = localStorage.getItem("prevoz");
+            if(prevoz != -1){
+
+                privrNiz = destinations.filter(x=> x.prevoz == prevoz);
+            }
+
+        }
+
+    let html=`<div class="row">`;
+    if(destinations.length !=0){
+        for(d of destinations){
+            let i=0;
+            
+            html+=`
+            <div class="col-md-4">
+            <div class="mu-featured-tours-single">
+                <img src="assets/images/${d.coverImg}" alt="img">
+                <div class="mu-featured-tours-single-info">
+                    <h3>${d.name} ${prevozIkonica(d.prevoz)}</h3>
+                    <h4> ${d.noNights} Nights</h4>
+                    <span class="mu-price-tag">&euro; ${d.price} </span>
+                    <p>${d.desc}</p>
+                    <a href="#mu-contact" data-id="${d.id}"  class="mu-book-now-btn bookDest">Book Now</a>
+                </div>
             </div>
         </div>
-    </div>
-        `
-    }
-
-    function prevozIkonica(prevoz){
-        if(prevoz == "Avion"){
-            return  `<i class="fas fa-plane"></i>`
+            `
         }
-        else{
-            return ` <i class="fas fa-bus"></i>`
-        }
-    }
-
-    html+=`</div>`;
     
-    document.querySelector("#destinacije").innerHTML=html;
+        function prevozIkonica(prevoz){
+            if(prevoz == "Avion"){
+                return  `<i class="fas fa-plane"></i>`
+            }
+            else{
+                return ` <i class="fas fa-bus"></i>`
+            }
+        }
+    
+        html+=`</div>`;
+        
+        document.querySelector("#destinacije").innerHTML=html;
+    
 
+
+    }
+   else{
+    document.querySelector("#destinacije").innerHTML=`<h2>There is no destianion in our agency with your filter specifactions</h2>`;
+   }
 
 }
 
@@ -139,7 +209,7 @@ function filterPrevoz(destinations){
 
 function sortitaj(krit,destinations){
     
-   console.log(destinations);
+   
             
            if(krit == "PriceLtoH"){
                destinations.sort(function(a,b){
@@ -364,37 +434,3 @@ function addLocalS(name,vrednost){
   
 }
 
-function proveriLs(){
-    
-    if(localStorage){
-        let zemlja = localStorage.getItem("zemlja");
-        let cena = localStorage.getItem("cena");
-        let prevoz = localStorage.getItem("prevoz");
-
-       let pomocniNiz=[];
-
-
-       if(zemlja != null){
-           pomocniNiz = nizDest.filter(x=> x.country.id == zemlja);
-           nizDest = pomocniNiz;
-
-           if(prevoz != null){
-               pomocniNiz = nizDest.filter(x=> x.prevoz == prevoz);
-               nizDest = pomocniNiz;
-           }
-
-           setDestinations(nizDest);
-       }
-  
-
-     
-     
-
-       
-    
-    
-    
-
-        
-    }
-}

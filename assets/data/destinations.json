@@ -85,7 +85,7 @@
             "name":"Turkey"
         },
         "price":250,
-        "coverImg":"antalija.jpg",
+        "coverImg":"antalija.jpeg",
         "noNights":10,
         "desc":"Antalya is the fifth-most populous city in Turkey and the capital of Antalya Province. Located on Anatolia's southwest coast bordered by the Taurus Mountains, Antalya is the largest Turkish city on the Mediterranean coast outside the Aegean region with over one million people in its metropolitan area.",
         "prevoz":"Autobus"
@@ -141,7 +141,48 @@
         "noNights":11,
         "desc":"Sharm El Sheikh  is an Egyptian city on the southern tip of the Sinai Peninsula, in South Sinai Governorate, on the coastal strip along the Red Sea.",
         "prevoz":"Avion"
+    },
+    {
+        "id":12,
+        "name":"Kemer",
+        "country":{
+            "id":2,
+            "name":"Turkey"
+        },
+        "price":470,
+        "coverImg":"kemer.jpg",
+        "noNights":10,
+        "desc":"Kemer is a seaside resort and district of Antalya Province on the Mediterranean coast of Turkey, 40 km west of the city of Antalya, on the Turkish Riviera.   Kemer is on the Gulf of Antalya, 53 km  of sea coast with the skirts of the western Taurus Mountains behind.",
+        "prevoz":"Avion"
+    },    
+    {
+        "id":13,
+        "name":"Barcelona",
+        "country":{
+            "id":3,
+            "name":"Spain"
+        },
+        "price":410,
+        "coverImg":"barsa.jpg",
+        "noNights":7,
+        "desc":"Barcelona  is a city on the coast of northeastern Spain. It is the capital and largest city of the autonomous community of Catalonia, as well as the second most populous municipality of Spain.",
+        "prevoz":"Autobus"
+    },
+    {
+        "id":14,
+        "name":"Rome",
+        "country":{
+            "id":4,
+            "name":"Italy"
+        },
+        "price":330,
+        "coverImg":"rome.jfif",
+        "noNights":9,
+        "desc":"Rome (Latin and Italian Roma, is the capital city and a special comune of Italy (named Comune di Roma Capitale). Rome also serves as the capital of the Lazio region. With 2,879,728 residents it is also the country's most populated comune. ",
+        "prevoz":"Autobus"
     }
+    
+
 
 
 ]
