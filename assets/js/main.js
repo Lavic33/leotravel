@@ -99,42 +99,42 @@ function setDestinations(destinations){
         
             
         }
-        if(localStorage.getItem("cena")){
-            let cena = localStorage.getItem("cena");
-            if(cena == "PriceLtoH"){
-                destinations.sort(function(a,b){
-                     if(a.price<b.price){
-                         return -1;
-                     }
-                     if(a.price>b.price){
-                         return 1;
-                     }
-                     if(a.price == b.price){
-                         return 0;
-                     }
-                 })
+            if(localStorage.getItem("cena")){
+                let cena = localStorage.getItem("cena");
+                if(cena == "PriceLtoH"){
+                    destinations.sort(function(a,b){
+                         if(a.price<b.price){
+                             return -1;
+                         }
+                         if(a.price>b.price){
+                             return 1;
+                         }
+                         if(a.price == b.price){
+                             return 0;
+                         }
+                     })
+                     
+                    
+                }
+     
+                if(cena == "PriceHtoL"){
+                 destinations.sort(function(a,b){
+                      if(a.price>b.price){
+                          return -1;
+                      }
+                      if(a.price<b.price){
+                          return 1;
+                      }
+                      if(a.price == b.price){
+                          return 0;
+                      }
+                  })
                  
-                
-            }
- 
-            if(cena == "PriceHtoL"){
-             destinations.sort(function(a,b){
-                  if(a.price>b.price){
-                      return -1;
-                  }
-                  if(a.price<b.price){
-                      return 1;
-                  }
-                  if(a.price == b.price){
-                      return 0;
-                  }
-              })
-             
-             
-         }
-        
+                 
+             }
+            
 
-        }
+            }
 
         if(localStorage.getItem("prevoz")){
             let prevoz = localStorage.getItem("prevoz");
